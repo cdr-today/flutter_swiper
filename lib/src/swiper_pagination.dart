@@ -223,10 +223,19 @@ class DotSwiperPaginationBuilder extends SwiperPlugin {
         children: list,
       );
     } else {
-      return new Row(
-        key: key,
-        mainAxisSize: MainAxisSize.min,
-        children: list,
+      return new Container(
+        child: Row(
+          key: key,
+          mainAxisSize: MainAxisSize.min,
+          children: list,
+        ),        
+        decoration: BoxDecoration(
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        ),
+        padding: EdgeInsets.symmetric(
+          horizontal: 5.0, vertical: 2.0
+        )
       );
     }
   }
